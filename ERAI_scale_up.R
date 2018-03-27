@@ -74,6 +74,7 @@ library(pracma)
   ERAI_T2M_SAmerica = crop(ERAI_T2M_pantropics, extent_SA)
   TRMM_CWD_SAmerica = crop(TRMM_CWD_pantropics, extent_SA)
 
+#limit the climate varaibles to the maximium and minimum observed values in the forest plots
   TRMM_CWD_SAmerica = calc(TRMM_CWD_SAmerica, fun = function(x){x[x < -276] = -276; return(x)})
   ERAI_VPD_SAmerica = calc(ERAI_VPD_SAmerica, fun = function(x){x[x > 0.8] = 0.8; return(x)})
   ERAI_VPD_SAmerica = calc(ERAI_VPD_SAmerica, fun = function(x){x[x < 0.18] = 0.18; return(x)})
