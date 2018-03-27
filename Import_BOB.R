@@ -4,7 +4,7 @@ source("R/metutils.R")
 if(isNamespaceLoaded("plyr")==T){try(unloadNamespace("plyr"), silent=T)}
 
 
-#new!!!, holy shit is this data messy. date format alternates between dmy and mdy! hence I've got some operations in here to 
+#new!. This data messy. date format alternates between dmy and mdy! hence I've got some operations in here to 
 # fix it, but there may still be problems
 bob <- readr::read_csv("data/site_data/BOB/bob_data_subset.csv") #seems to be in dmy format?
 bob$date <- lubridate::parse_date_time(paste(bob$Date,bob$Time), "dmy HMS")
