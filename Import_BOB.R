@@ -34,7 +34,7 @@ bob <- bob %>% rename(dateTime=date)
 # bob %>% ggplot(data=., aes(date, temp.obs, color=hour))+geom_point(cex=0.25)+viridis::scale_color_viridis()
 # bob %>% ggplot(data=., aes(date, vpd.obs, color=hour))+geom_point(cex=0.25)+viridis::scale_color_viridis()
 
-# #old, has problems with some months loosing days # WOAH THIS IS FUCKED
+# #old, has problems with some months loosing days 
 # bob <- read_csv("site_data/BOB/bob_data_subset.csv") #seems to be in dmy format?
 # bob$date <- parse_date_time(bob$Date, "dmy")
 # bob <- (bob %>% filter(is.na(date)==F))
